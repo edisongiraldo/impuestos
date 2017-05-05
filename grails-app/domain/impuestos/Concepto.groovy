@@ -1,9 +1,17 @@
 package impuestos
 
+import javax.xml.bind.annotation.XmlElement
+import javax.xml.bind.annotation.XmlAccessType
+import javax.xml.bind.annotation.XmlAccessorType
+
+@XmlAccessorType(XmlAccessType.NONE)
 class Concepto {
 
+    @XmlElement
 	String		descripcion
+    @XmlElement
 	String		afectacion
+    @XmlElement
 	String		estado   
     Date   		dateCreated
     Date   		lastUpdated	
@@ -12,6 +20,7 @@ class Concepto {
 
     static transients = ['nombreEstado', 'nomAfectacion']
 
+    @XmlElement
     def getNombreEstado() {
     	
     	def name = ""

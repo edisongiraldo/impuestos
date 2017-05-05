@@ -29,6 +29,7 @@ class ImpuestoCRUDService {
 		concepto.afectacion = datos.afectacion
 		concepto.estado = datos.estado
     	concepto.save(flush: true, failOnError: true)
+        return concepto
     }
 
     def borrarConcepto(datos){
