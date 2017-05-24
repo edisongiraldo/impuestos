@@ -13,7 +13,7 @@ class WSImpuestosService {
 
     @WebMethod
     @WebResult(name = "listaConceptos", targetNamespace = "") 
-    def listConcepto() {
+    def Concepto[] listConcepto() {
     	return ImpuestoCRUDService.getListaConcepto()
     }
 
@@ -62,7 +62,7 @@ class WSImpuestosService {
 
     @WebMethod
     @WebResult(name = "borrarConcepto", targetNamespace = "") 
-    def borrarConcepto(
+    def boolean borrarConcepto(
     		@WebParam(name = 'idConcepto') int idConcepto
     ){
     	def datos = [
